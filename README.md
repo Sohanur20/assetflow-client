@@ -4,9 +4,9 @@ AssetFlow helps companies keep track of the assets their employees use every day
 
 ## Live Site
 
-- **Live Site URL:** _to be added after deployment_
-- **HR Manager Email (admin):** _to be added before submission_
-- **HR Manager Password:** _to be added before submission_
+- **Live Site URL:** https://assetflow-client-sigma.vercel.app
+- **HR Manager Email (admin):** hr@xyz.com
+- **HR Manager Password:** Asset@1234
 
 ## Features
 
