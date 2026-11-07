@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   const linkClass = ({ isActive }) =>
-    `px-3 py-2 rounded-lg text-sm font-medium transition ${
+    `px-2.5 py-2 rounded-lg text-[13px] font-medium whitespace-nowrap transition ${
       isActive ? 'bg-teal-700 text-white' : 'text-slate-600 hover:bg-teal-50 hover:text-teal-800'
     }`;
 
@@ -104,12 +104,12 @@ const Navbar = () => {
             )}
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1 flex-wrap justify-center">{links}</nav>
+          <nav className="hidden xl:flex items-center gap-0.5 justify-center">{links}</nav>
 
           <div className="flex items-center gap-3">
             {user && (
               <div className="hidden md:flex items-center gap-3">
-                <div className="text-right leading-tight">
+                <div className="text-right leading-tight hidden xl:block">
                   <p className="text-sm font-semibold text-slate-800">{displayName}</p>
                   <p className="text-xs text-slate-500">{dbUser?.role === 'hr' ? 'HR Manager' : 'Employee'}</p>
                 </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
               </div>
             )}
             <button
-              className="lg:hidden btn btn-ghost btn-sm"
+              className="xl:hidden btn btn-ghost btn-sm"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -130,7 +130,7 @@ const Navbar = () => {
         </div>
 
         {open && (
-          <nav className="lg:hidden pb-4 flex flex-col gap-1" onClick={() => setOpen(false)}>
+          <nav className="xl:hidden pb-4 flex flex-col gap-1" onClick={() => setOpen(false)}>
             {links}
             {user && (
               <button onClick={handleLogout} className="af-btn-primary mt-2 w-fit">
