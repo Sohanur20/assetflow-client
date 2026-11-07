@@ -103,6 +103,10 @@ const Payment = () => {
       if (byLimit) return byLimit;
     }
     if (dbUser?.packageId) return getPackageById(dbUser.packageId);
+    if (dbUser?.packageName) {
+      const byName = PACKAGES.find((p) => p.name === dbUser.packageName);
+      if (byName) return byName;
+    }
     if (dbUser?.memberLimit) return PACKAGES.find((p) => p.memberLimit === Number(dbUser.memberLimit)) || PACKAGES[0];
     return null;
   }, [location.state, searchParams, dbUser]);
